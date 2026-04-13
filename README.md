@@ -8,17 +8,19 @@ A modern Next.js portfolio built with a dark glassmorphism aesthetic, neon magen
 - React 19
 - Tailwind CSS 4
 - Turbopack for local development
+- Lucide React icons
 
 ## Features
 
-- Sticky responsive header with mobile hamburger menu
-- Light and dark mode toggle with persisted theme preference
-- Hero, About, Projects, Testimonials, Contact, and Footer sections
-- Dedicated `/about` page
-- Dynamic project detail pages at `/projects/[slug]`
-- Contact form posting to `app/api/contact/route.js`
-- Glassmorphism UI system with shared button and card treatments
-- Accessible semantic markup and keyboard-friendly interactions
+- **Hero Section**: Personal introduction with gradient text fade effects, headshot photo, and bouncing scroll indicator
+- **Responsive Layout**: Photo-first layout on mobile, side-by-side on desktop
+- **Tech Stack Marquee**: Scrolling tech badges (Accessibility, Design Thinking, Modern/Sleek UI's, Customer Focused) with seamless infinite loop
+- **About Section**: Skills grid with glassmorphism cards and tech stack marquee
+- **Projects**: Dynamic project detail pages at `/projects/[slug]`
+- **Contact Form**: API route at `app/api/contact/route.js`
+- **Dark/Light Mode**: Theme toggle with persisted preference
+- **Glassmorphism UI**: Shared button, card, and panel treatments throughout
+- **Parallax Effects**: Subtle scroll-based animations
 
 ## Getting Started
 

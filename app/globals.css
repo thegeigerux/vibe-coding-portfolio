@@ -86,7 +86,12 @@ body {
     radial-gradient(circle at 20% 15%, var(--bg-glow-1), transparent 24%),
     radial-gradient(circle at 82% 22%, var(--bg-glow-2), transparent 22%),
     radial-gradient(circle at 50% 100%, var(--bg-glow-3), transparent 32%),
-    linear-gradient(180deg, var(--bg-grad-start) 0%, var(--bg-grad-mid) 42%, var(--bg-grad-end) 100%);
+    linear-gradient(
+      180deg,
+      var(--bg-grad-start) 0%,
+      var(--bg-grad-mid) 42%,
+      var(--bg-grad-end) 100%
+    );
   color: var(--color-text);
   background-attachment: fixed;
   transition:
@@ -121,8 +126,14 @@ a {
   content: "";
   transform: scaleX(0);
   transform-origin: right;
-  transition: transform 180ms ease, background 180ms ease;
-  background: linear-gradient(90deg, var(--color-accent), var(--color-accent-2));
+  transition:
+    transform 180ms ease,
+    background 180ms ease;
+  background: linear-gradient(
+    90deg,
+    var(--color-accent),
+    var(--color-accent-2)
+  );
 }
 
 .text-link:hover::after,
@@ -161,7 +172,7 @@ img {
 }
 
 .marquee {
-  animation: marquee 22s linear infinite;
+  animation: marquee 44s linear infinite;
 }
 
 .parallax-layer {
@@ -232,7 +243,11 @@ img {
   isolation: isolate;
   overflow: hidden;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02)),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.08),
+      rgba(255, 255, 255, 0.02)
+    ),
     rgba(255, 255, 255, 0.03);
   transition:
     transform 180ms ease,
@@ -270,9 +285,15 @@ img {
   inset: -35%;
   z-index: 0;
   content: "";
-  background: radial-gradient(circle, rgba(255, 79, 216, 0.18), transparent 62%);
+  background: radial-gradient(
+    circle,
+    rgba(255, 79, 216, 0.18),
+    transparent 62%
+  );
   transform: scale(0.65);
-  transition: transform 220ms ease, opacity 220ms ease;
+  transition:
+    transform 220ms ease,
+    opacity 220ms ease;
   opacity: 0;
 }
 
@@ -281,7 +302,11 @@ img {
   transform: translateY(-3px) scale(1.06);
   color: var(--color-accent-2);
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.03)),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.12),
+      rgba(255, 255, 255, 0.03)
+    ),
     rgba(255, 255, 255, 0.05);
   box-shadow:
     0 16px 34px rgba(255, 79, 216, 0.18),
@@ -317,7 +342,11 @@ img {
   z-index: 0;
   content: "";
   border-radius: inherit;
-  background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.16), transparent 38%);
+  background: radial-gradient(
+    circle at 20% 20%,
+    rgba(255, 255, 255, 0.16),
+    transparent 38%
+  );
   opacity: 0;
   transition: opacity 180ms ease;
 }
@@ -335,7 +364,9 @@ img {
     transparent 66%
   );
   transform: translateX(-140%) rotate(14deg);
-  transition: transform 320ms ease, opacity 220ms ease;
+  transition:
+    transform 320ms ease,
+    opacity 220ms ease;
   opacity: 0;
 }
 
@@ -362,7 +393,11 @@ img {
 }
 
 .btn-primary {
-  background: linear-gradient(90deg, var(--color-accent), var(--color-accent-2));
+  background: linear-gradient(
+    90deg,
+    var(--color-accent),
+    var(--color-accent-2)
+  );
   color: #06111b;
   box-shadow: 0 10px 24px rgba(255, 79, 216, 0.18);
 }
@@ -377,7 +412,11 @@ img {
 .btn-secondary {
   border: 1px solid rgba(255, 255, 255, 0.12);
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02)),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.08),
+      rgba(255, 255, 255, 0.02)
+    ),
     rgba(255, 255, 255, 0.03);
   color: var(--color-text);
 }
@@ -496,7 +535,11 @@ img {
   height: 18rem;
   content: "";
   border-radius: 9999px;
-  background: radial-gradient(circle, rgba(255, 79, 216, 0.24), transparent 68%);
+  background: radial-gradient(
+    circle,
+    rgba(255, 79, 216, 0.24),
+    transparent 68%
+  );
   filter: blur(30px);
 }
 
@@ -518,7 +561,7 @@ img {
   }
 
   to {
-    transform: translateX(-50%);
+    transform: translateX(-33.33%);
   }
 }
 
