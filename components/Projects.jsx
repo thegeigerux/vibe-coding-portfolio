@@ -26,7 +26,10 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" className="scroll-mt-24 pt-12 pb-18 sm:scroll-mt-28 sm:pt-14 sm:pb-22">
+    <section
+      id="projects"
+      className="scroll-mt-24 pt-12 pb-18 sm:scroll-mt-28 sm:pt-14 sm:pb-22"
+    >
       <div className="section-shell space-y-8">
         <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
           <div className="space-y-4">
@@ -38,9 +41,9 @@ export default function Projects() {
             </h2>
           </div>
           <p className="max-w-xl text-sm leading-relaxed text-[var(--color-muted)] sm:text-base">
-            Browse horizontally on smaller screens with touch, trackpad, or keyboard
-            arrows. On larger screens, the gallery settles into a cleaner grid so the
-            section feels deliberate instead of oversized.
+            Browse horizontally on smaller screens with touch, trackpad, or
+            keyboard arrows. On larger screens, the gallery settles into a
+            cleaner grid so the section feels deliberate instead of oversized.
           </p>
         </div>
 
@@ -55,7 +58,7 @@ export default function Projects() {
             {projects.map((project, index) => (
               <div
                 key={project.slug}
-                className="min-h-full w-[18.5rem] shrink-0 sm:w-[22rem] lg:w-auto"
+                className="min-h-full w-[15rem] shrink-0 sm:w-[18rem] lg:w-auto"
               >
                 <ProjectCard project={project} priority={index < 2} />
               </div>

@@ -5,29 +5,33 @@ export const metadata = {
   metadataBase: new URL("https://jamesgeiger.dev"),
   title: {
     default: "James Geiger | Developer Portfolio",
-    template: "%s | James Geiger"
+    template: "%s | James Geiger",
   },
   description:
     "Modern developer portfolio showcasing frontend engineering, product thinking, and immersive web experiences.",
+  themeColor: [
+    { media: "(prefers-color-scheme: dark)", color: "#0a0a0f" },
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+  ],
   keywords: [
     "developer portfolio",
     "next.js portfolio",
     "frontend developer",
     "ui engineer",
-    "web performance"
+    "web performance",
   ],
   openGraph: {
     title: "James Geiger | Developer Portfolio",
     description:
       "Modern developer portfolio showcasing frontend engineering, product thinking, and immersive web experiences.",
-    type: "website"
+    type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "James Geiger | Developer Portfolio",
     description:
-      "Modern developer portfolio showcasing frontend engineering, product thinking, and immersive web experiences."
-  }
+      "Modern developer portfolio showcasing frontend engineering, product thinking, and immersive web experiences.",
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -46,7 +50,7 @@ export default function RootLayout({ children }) {
                   document.documentElement.dataset.theme = "dark";
                 }
               })();
-            `
+            `,
           }}
         />
         <Header />

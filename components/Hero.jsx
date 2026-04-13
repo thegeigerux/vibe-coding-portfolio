@@ -12,9 +12,13 @@ const marqueeItems = [
 
 export default function Hero() {
   const [offset, setOffset] = useState(0);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setOffset(window.scrollY * 0.18);
+    const onScroll = () => {
+      setOffset(window.scrollY * 0.18);
+      setIsScrolled(window.scrollY > 50);
+    };
 
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -28,7 +32,7 @@ export default function Hero() {
         <div className="relative z-10 grid min-h-[calc(100vh-4rem)] items-center gap-10 pb-8 pt-6 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
           <div className="order-2 flex flex-col gap-5 lg:order-1">
             <p className="glass-panel inline-flex w-fit rounded-full px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-[var(--color-muted)]">
-              Available for work
+              Associate Product Designer
             </p>
             <div className="space-y-4">
               <h1 className="max-w-4xl text-[1.75rem] font-medium leading-[1.25] tracking-tight sm:text-3xl md:text-4xl lg:text-[2.5rem]">
@@ -59,9 +63,8 @@ export default function Hero() {
                 </span>
               </h1>
               <p className="max-w-2xl text-base leading-relaxed text-[var(--color-muted)] sm:text-lg">
-                I design and ship portfolio-grade interfaces with strong visual
-                rhythm, cinematic motion, and performance discipline so products
-                feel sharp, premium, and alive from the first scroll.
+                I design products that look sharp, move with intention, and
+                perform smoothly from the very first scroll.
               </p>
             </div>
 
@@ -87,7 +90,7 @@ export default function Hero() {
               style={{ transform: `translateY(${offset * -0.15}px)` }}
               aria-hidden="true"
             />
-            <div className="relative w-[70%] overflow-hidden rounded-[1.5rem] border border-white/10 shadow-[0_0_60px_-15px_rgba(255,79,216,0.3)] sm:w-[60%] lg:w-full">
+            <div className="relative mx-auto w-[70%] overflow-hidden rounded-[1.5rem] border border-white/10 shadow-[0_0_60px_-15px_rgba(255,79,216,0.3)] sm:w-[60%] lg:mx-0 lg:w-full">
               <Image
                 src="/images/JG_Headshot_2026.jpg"
                 alt="James Geiger"
@@ -132,7 +135,9 @@ export default function Hero() {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="pointer-events-none fixed bottom-8 left-1/2 z-50 flex -translate-x-1/2 flex-col items-center gap-2">
+      <div
+        className={`pointer-events-none fixed bottom-8 left-1/2 z-50 flex -translate-x-1/2 flex-col items-center gap-2 transition-opacity duration-300 ${isScrolled ? "opacity-0" : "opacity-100"}`}
+      >
         <span className="text-xs font-semibold uppercase tracking-widest text-white/80">
           Scroll
         </span>
