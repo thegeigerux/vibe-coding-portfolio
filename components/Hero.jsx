@@ -27,48 +27,43 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative isolate pb-16 pt-2 sm:pb-18 sm:pt-3">
+    <section className="relative isolate overflow-x-clip pb-16 pt-2 sm:pb-18 sm:pt-3">
       <div className="section-shell grain section-glow relative min-h-screen">
-        <div className="relative z-10 grid min-h-[calc(100vh-4rem)] items-center gap-10 pb-8 pt-6 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
-          <div className="order-2 flex flex-col gap-5 lg:order-1">
+        <div className="relative z-10 grid min-h-[calc(100vh-4rem)] items-center gap-8 pb-8 pt-5 sm:gap-10 sm:pt-6 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
+          <div className="order-2 flex flex-col gap-4 sm:gap-5 lg:order-1">
             <p className="glass-panel inline-flex w-fit rounded-full px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-[var(--color-muted)]">
               Associate Product Designer
             </p>
-            <div className="space-y-4">
-              <h1 className="max-w-4xl text-[1.75rem] font-medium leading-[1.25] tracking-tight sm:text-3xl md:text-4xl lg:text-[2.5rem]">
-                <span
-                  className="block"
-                  style={{
-                    maskImage:
-                      "linear-gradient(180deg, black 0%, black 55%, transparent 100%)",
-                    WebkitMaskImage:
-                      "linear-gradient(180deg, black 0%, black 55%, transparent 100%)",
-                  }}
-                >
+            <div className="space-y-3 sm:space-y-4">
+              <h1 className="max-w-4xl text-[1.45rem] font-medium leading-[1.02] tracking-tight sm:text-3xl md:text-4xl lg:text-[2.5rem]">
+                <span className="block">
                   Hello! I'm{" "}
                   <span className="bg-[linear-gradient(90deg,var(--color-accent),var(--color-accent-2))] bg-clip-text text-transparent">
                     James Geiger
                   </span>
                 </span>
+                <span className="mt-1 block max-w-[22ch] sm:max-w-none">
+                  Product designer turned
+                </span>
                 <span
-                  className="mt-1 block whitespace-nowrap"
+                  className="block"
                   style={{
                     maskImage:
-                      "linear-gradient(180deg, black 0%, black 55%, transparent 100%)",
+                      "linear-gradient(180deg, black 0%, black 58%, transparent 100%)",
                     WebkitMaskImage:
-                      "linear-gradient(180deg, black 0%, black 55%, transparent 100%)",
+                      "linear-gradient(180deg, black 0%, black 58%, transparent 100%)",
                   }}
                 >
-                  Product designer turned vibe coder
+                  vibe coder
                 </span>
               </h1>
-              <p className="max-w-2xl text-base leading-relaxed text-[var(--color-muted)] sm:text-lg">
+              <p className="max-w-xl text-[0.98rem] leading-relaxed text-[var(--color-muted)] sm:text-lg">
                 I design products that look sharp, move with intention, and
                 perform smoothly from the very first scroll.
               </p>
             </div>
 
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-3 pt-1">
               <a
                 href="#projects"
                 className="btn btn-primary px-5 py-2.5 text-sm font-semibold tracking-wide focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-text)]"
@@ -90,13 +85,14 @@ export default function Hero() {
               style={{ transform: `translateY(${offset * -0.15}px)` }}
               aria-hidden="true"
             />
-            <div className="relative mx-auto w-[70%] overflow-hidden rounded-[1.5rem] border border-white/10 shadow-[0_0_60px_-15px_rgba(255,79,216,0.3)] sm:w-[60%] lg:mx-0 lg:w-full">
+            <div className="relative mx-auto aspect-[1.02/1] w-[82%] max-w-[22rem] overflow-hidden rounded-[1.5rem] border border-white/10 shadow-[0_0_60px_-15px_rgba(255,79,216,0.3)] sm:aspect-auto sm:w-[60%] sm:max-w-none lg:mx-0 lg:w-full">
               <Image
                 src="/images/JG_Headshot_2026.jpg"
                 alt="James Geiger"
                 width={450}
                 height={560}
-                className="w-full h-auto object-cover"
+                className="h-full w-full object-cover object-center sm:h-auto"
+                style={{ objectPosition: "center 24%" }}
                 priority
               />
             </div>
@@ -136,7 +132,7 @@ export default function Hero() {
 
       {/* Scroll Indicator */}
       <div
-        className={`pointer-events-none fixed bottom-8 left-1/2 z-50 flex -translate-x-1/2 flex-col items-center gap-2 transition-opacity duration-300 ${isScrolled ? "opacity-0" : "opacity-100"}`}
+        className={`pointer-events-none fixed bottom-8 left-1/2 z-50 hidden -translate-x-1/2 flex-col items-center gap-2 transition-opacity duration-300 md:flex ${isScrolled ? "opacity-0" : "opacity-100"}`}
       >
         <span className="text-xs font-semibold uppercase tracking-widest text-white/80">
           Scroll

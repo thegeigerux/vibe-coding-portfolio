@@ -1,30 +1,7 @@
-"use client";
-
-import { useRef } from "react";
 import ProjectCard from "@/components/ProjectCard";
 import { projects } from "@/lib/projects";
 
 export default function Projects() {
-  const scrollerRef = useRef(null);
-
-  const onKeyDown = (event) => {
-    if (!scrollerRef.current) {
-      return;
-    }
-
-    const amount = 320;
-
-    if (event.key === "ArrowRight") {
-      event.preventDefault();
-      scrollerRef.current.scrollBy({ left: amount, behavior: "smooth" });
-    }
-
-    if (event.key === "ArrowLeft") {
-      event.preventDefault();
-      scrollerRef.current.scrollBy({ left: -amount, behavior: "smooth" });
-    }
-  };
-
   return (
     <section
       id="projects"
@@ -41,25 +18,19 @@ export default function Projects() {
             </h2>
           </div>
           <p className="max-w-xl text-sm leading-relaxed text-[var(--color-muted)] sm:text-base">
-            Browse horizontally on smaller screens with touch, trackpad, or
-            keyboard arrows. On larger screens, the gallery settles into a
-            cleaner grid so the section feels deliberate instead of oversized.
+            On mobile, the work stacks into an easy-to-scan feed. As the screen
+            opens up, the gallery shifts into a cleaner multi-column layout so
+            the section stays polished instead of cramped.
           </p>
         </div>
 
         <div
-          ref={scrollerRef}
-          tabIndex={0}
-          onKeyDown={onKeyDown}
           aria-label="Project gallery"
-          className="project-gallery-frame glass-panel projects-scroller overflow-x-auto overflow-y-hidden rounded-[2rem] p-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-accent)]"
+          className="project-gallery-frame glass-panel rounded-[2rem] p-3 sm:p-4"
         >
-          <div className="flex w-max gap-4 lg:grid lg:min-w-0 lg:w-full lg:grid-cols-2 xl:grid-cols-3">
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {projects.map((project, index) => (
-              <div
-                key={project.slug}
-                className="min-h-full w-[15rem] shrink-0 sm:w-[18rem] lg:w-auto"
-              >
+              <div key={project.slug} className="min-h-full">
                 <ProjectCard project={project} priority={index < 2} />
               </div>
             ))}

@@ -8,25 +8,39 @@ const links = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/10 py-8">
-      <div className="section-shell glass-panel flex flex-col gap-4 rounded-[2rem] px-6 py-5 sm:flex-row sm:items-center sm:justify-between">
-        <p className="text-sm uppercase tracking-[0.2em] text-[var(--color-muted)]">
-          © {new Date().getFullYear()} James Geiger
-        </p>
+    <footer className="py-6 sm:py-8">
+      <div className="section-shell">
+        <div className="glass-panel rounded-[1.75rem] px-5 py-4 sm:rounded-[2rem] sm:px-6 sm:py-5">
+          <div className="flex flex-col gap-4 sm:gap-5">
+            <div className="flex items-center justify-between gap-3">
+              <div className="flex h-11 items-center">
+                <p className="min-w-0 whitespace-nowrap leading-none text-[0.58rem] font-semibold uppercase tracking-[0.18em] text-[var(--color-accent-2)] sm:text-[0.62rem] sm:tracking-[0.22em]">
+                  Connect with me
+                </p>
+              </div>
 
-        <div className="flex items-center gap-3">
-          {links.map(({ href, label, icon: Icon }) => (
-            <Link
-              key={label}
-              href={href}
-              target="_blank"
-              rel="noreferrer"
-              aria-label={label}
-              className="icon-button inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-[var(--color-muted)] transition hover:text-[var(--color-accent-2)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-accent)]"
-            >
-              <Icon className="h-4 w-4" />
-            </Link>
-          ))}
+              <div className="flex items-center gap-2 sm:gap-3">
+              {links.map(({ href, label, icon: Icon }) => (
+                <Link
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={label}
+                  className="inline-flex h-11 w-11 items-center justify-center rounded-full text-[var(--color-muted)] transition hover:text-[var(--color-accent-2)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-accent)]"
+                >
+                  <span className="icon-button inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] sm:h-10 sm:w-10">
+                    <Icon className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
+                  </span>
+                </Link>
+              ))}
+              </div>
+            </div>
+
+            <p className="border-t border-white/10 pt-3 text-[0.72rem] uppercase tracking-[0.18em] text-[var(--color-muted)]/85 sm:text-sm sm:tracking-[0.2em]">
+              © {new Date().getFullYear()} James Geiger
+            </p>
+          </div>
         </div>
       </div>
     </footer>

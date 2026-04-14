@@ -1,14 +1,4 @@
 import { skills } from "@/lib/projects";
-import { Hexagon, Ghost, Gem, Cpu } from "lucide-react";
-
-const CLIENTS = [
-  { name: "Next.js", icon: Hexagon },
-  { name: "React", icon: Cpu },
-  { name: "TypeScript", icon: Gem },
-  { name: "Tailwind", icon: Ghost },
-  { name: "Node.js", icon: Hexagon },
-  { name: "Vercel", icon: Cpu },
-];
 
 export default function About() {
   return (
@@ -44,39 +34,6 @@ export default function About() {
                   <p className="text-base font-bold uppercase tracking-[0.08em]">
                     {skill}
                   </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Tech Stack Marquee */}
-        <div className="relative mt-10 overflow-hidden rounded-2xl border border-white/10 bg-white/5 py-6 backdrop-blur-xl">
-          <p className="mb-4 px-8 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-muted)]">
-            Tech Stack
-          </p>
-          <div
-            className="relative flex overflow-hidden"
-            style={{
-              maskImage:
-                "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
-              WebkitMaskImage:
-                "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
-            }}
-          >
-            <div className="animate-marquee flex gap-12 whitespace-nowrap px-4">
-              {[...CLIENTS, ...CLIENTS, ...CLIENTS].map((client, i) => (
-                <div
-                  key={i}
-                  className="flex items-center gap-2 opacity-50 transition-all hover:opacity-100 hover:scale-105 cursor-default grayscale hover:grayscale-0"
-                >
-                  <client.icon
-                    className="h-6 w-6 text-white"
-                    strokeWidth={1.5}
-                  />
-                  <span className="text-lg font-bold text-white tracking-tight">
-                    {client.name}
-                  </span>
                 </div>
               ))}
             </div>
