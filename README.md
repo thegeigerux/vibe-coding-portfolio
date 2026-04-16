@@ -1,6 +1,6 @@
 # James Geiger's Portfolio
 
-A modern Next.js portfolio built with a dark glassmorphism aesthetic, neon magenta/teal accents, responsive layouts, dynamic project pages, a dedicated About page, testimonials, and a contact form API route.
+A modern Next.js portfolio built with a dark glassmorphism aesthetic, accessibility-minded color contrast, responsive layouts, dynamic project pages, a dedicated About page, testimonials, and a contact form API route.
 
 ## Stack
 
@@ -13,8 +13,8 @@ A modern Next.js portfolio built with a dark glassmorphism aesthetic, neon magen
 
 ## Features
 
-- **Hero Section**: Personal introduction with gradient text treatments, headshot photo, and mobile-tuned layout adjustments
-- **Sticky Header**: Glassmorphism navigation with hover states, theme toggle, and mobile hamburger menu
+- **Hero Section**: Personal introduction with a simplified headline, teal name accent, softened headshot fade, and mobile-tuned layout adjustments
+- **Sticky Header**: Glassmorphism navigation with roomier desktop spacing, theme toggle, and mobile hamburger menu
 - **Responsive Layout**: Mobile-first sections tuned for phone preview and desktop polish
 - **About Section**: Skills grid and supporting brand/story content
 - **Dedicated About Page**: Expanded bio, timeline, principles, and deeper personal context at `/about`
@@ -22,8 +22,9 @@ A modern Next.js portfolio built with a dark glassmorphism aesthetic, neon magen
 - **Testimonials**: Homepage social proof section between Projects and Contact
 - **Contact Form**: API route at `app/api/contact/route.js`
 - **Dark/Light Mode**: Theme toggle with persisted preference
-- **Glassmorphism UI**: Shared button, card, panel, and icon treatments throughout
-- **Parallax Effects**: Subtle scroll-based animations
+- **Glassmorphism UI**: Shared darker button treatments, card, panel, and icon styles throughout
+- **Accessible Color System**: Dark and light theme accent/muted colors tuned for stronger AAA-oriented contrast
+- **Ambient Motion**: Lightweight drifting background glows and subtle parallax effects
 - **Mobile Browser Chrome Matching**: Theme metadata and root backgrounds tuned for better mobile Safari color blending
 
 ## Getting Started
@@ -94,6 +95,7 @@ lib/
 - Update header branding and navigation in `components/Header.jsx`
 - Replace social/profile links in `components/Footer.jsx`
 - Refine hero content, image crop, and mobile headline behavior in `components/Hero.jsx`
+- Adjust ambient glow motion, theme variables, and shared button behavior in `app/globals.css`
 - Tweak project gallery layout in `components/Projects.jsx`
 
 ## Notes
@@ -102,3 +104,4 @@ lib/
 - The contact route is currently a validated stub ready for email or CRM wiring
 - Local development uses Turbopack to avoid the instability we hit with the Webpack dev server
 - The Next.js dev indicator is disabled in `next.config.js` for cleaner design review on local and phone previews
+- Ambient background motion respects `prefers-reduced-motion`

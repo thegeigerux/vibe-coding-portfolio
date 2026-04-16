@@ -19,10 +19,10 @@ export default function Header() {
           <div className="flex items-start justify-between gap-4">
             <Link href="/" className="flex flex-col gap-1" onClick={closeMenu}>
               <span className="text-sm font-black uppercase tracking-[0.28em] text-[var(--color-text)] sm:text-base">
-                James Geiger&apos;s Portfolio
+                James Geiger
               </span>
               <span className="text-[0.65rem] font-semibold uppercase tracking-[0.32em] text-[var(--color-accent-2)] sm:text-[0.72rem]">
-                Product Design | Vibe Coding
+                Product Designer | Vibe Coder
               </span>
             </Link>
 
@@ -55,8 +55,8 @@ export default function Header() {
             </button>
           </div>
 
-          <div className="hidden flex-wrap items-center gap-3 lg:flex lg:justify-end">
-            <div className="flex flex-wrap items-center gap-3 text-sm uppercase tracking-[0.2em] text-[var(--color-muted)]">
+          <div className="hidden flex-wrap items-center gap-4 lg:flex lg:justify-end">
+            <div className="flex flex-wrap items-center gap-5 text-sm uppercase tracking-[0.2em] text-[var(--color-muted)]">
               <Link href="/about" className="text-link transition hover:text-[var(--color-accent-2)]">
                 About
               </Link>
