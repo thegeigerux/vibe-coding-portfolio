@@ -3,6 +3,11 @@ import "./globals.css";
 
 export const metadata = {
   metadataBase: new URL("https://jamesgeiger.dev"),
+  icons: {
+    icon: "/icon.svg",
+    shortcut: "/icon.svg",
+    apple: "/icon.svg",
+  },
   title: {
     default: "James Geiger | Developer Portfolio",
     template: "%s | James Geiger",

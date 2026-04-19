@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import ThemeToggle from "@/components/ThemeToggle";
@@ -17,12 +18,22 @@ export default function Header() {
           className="glass-panel relative isolate flex flex-col gap-4 rounded-[2rem] px-5 py-4 lg:flex-row lg:items-center lg:justify-between"
         >
           <div className="flex items-start justify-between gap-4">
-            <Link href="/" className="flex flex-col gap-1" onClick={closeMenu}>
-              <span className="text-sm font-black uppercase tracking-[0.28em] text-[var(--color-text)] sm:text-base">
-                James Geiger
-              </span>
-              <span className="text-[0.65rem] font-semibold uppercase tracking-[0.32em] text-[var(--color-accent-2)] sm:text-[0.72rem]">
-                Product Designer | Vibe Coder
+            <Link href="/" className="flex items-center gap-3" onClick={closeMenu}>
+              <Image
+                src="/brand/jg-glyph.svg"
+                alt="JG monogram"
+                width={40}
+                height={29}
+                className="h-9 w-auto shrink-0 sm:h-10"
+                priority
+              />
+              <span className="flex flex-col gap-1">
+                <span className="text-sm font-black uppercase tracking-[0.28em] text-[var(--color-text)] sm:text-base">
+                  James Geiger
+                </span>
+                <span className="text-[0.65rem] font-semibold uppercase tracking-[0.32em] text-[var(--color-accent-2)] sm:text-[0.72rem]">
+                  Product Designer | Vibe Coder
+                </span>
               </span>
             </Link>
 
