@@ -10,7 +10,7 @@ export default function Header() {
   const closeMenu = () => setIsOpen(false);
 
   return (
-    <header className="sticky top-3 z-[200] mt-3">
+    <header className="fixed inset-x-0 top-3 z-[200]">
       <div className="section-shell">
         <nav
           aria-label="Primary"

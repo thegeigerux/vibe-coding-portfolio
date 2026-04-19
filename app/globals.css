@@ -162,7 +162,7 @@ body::after {
   animation: ambient-float 18s ease-in-out infinite alternate;
 }
 
-body > * {
+body > :not(script):not(header) {
   position: relative;
   z-index: 1;
 }

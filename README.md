@@ -14,7 +14,7 @@ A modern Next.js portfolio built with a dark glassmorphism aesthetic, accessibil
 ## Features
 
 - **Hero Section**: Personal introduction with a simplified headline, teal name accent, softened headshot fade, and mobile-tuned layout adjustments
-- **Sticky Header**: Glassmorphism navigation with roomier desktop spacing, theme toggle, and mobile hamburger menu
+- **Fixed Header**: Glassmorphism navigation pinned to the top of the page with roomier desktop spacing, theme toggle, and mobile hamburger menu
 - **Responsive Layout**: Mobile-first sections tuned for phone preview and desktop polish
 - **About Section**: Skills grid and supporting brand/story content
 - **Dedicated About Page**: Expanded bio, timeline, principles, and deeper personal context at `/about`
@@ -25,6 +25,7 @@ A modern Next.js portfolio built with a dark glassmorphism aesthetic, accessibil
 - **Glassmorphism UI**: Shared darker button treatments, card, panel, and icon styles throughout
 - **Accessible Color System**: Dark and light theme accent/muted colors tuned for stronger AAA-oriented contrast
 - **Ambient Motion**: Lightweight drifting background glows and subtle parallax effects
+- **Footer Socials**: GitHub, LinkedIn, Instagram, and Substack links with hover/focus labels
 - **Mobile Browser Chrome Matching**: Theme metadata and root backgrounds tuned for better mobile Safari color blending
 
 ## Getting Started
@@ -92,8 +93,8 @@ lib/
 - Update project content, testimonials, skills, and about-page data in `lib/projects.js`
 - Adjust global theme variables and shared UI styles in `app/globals.css`
 - Edit homepage composition in `app/page.jsx`
-- Update header branding and navigation in `components/Header.jsx`
-- Replace social/profile links in `components/Footer.jsx`
+- Update header branding, fixed positioning, and navigation in `components/Header.jsx`
+- Replace social/profile links, hover labels, and footer icons in `components/Footer.jsx`
 - Refine hero content, image crop, and mobile headline behavior in `components/Hero.jsx`
 - Adjust ambient glow motion, theme variables, and shared button behavior in `app/globals.css`
 - Tweak project gallery layout in `components/Projects.jsx`
@@ -101,6 +102,7 @@ lib/
 ## Notes
 
 - The footer year updates automatically with `new Date().getFullYear()`
+- The footer includes live social links for GitHub, LinkedIn, Instagram, and Substack
 - The contact route is currently a validated stub ready for email or CRM wiring
 - Local development uses Turbopack to avoid the instability we hit with the Webpack dev server
 - The Next.js dev indicator is disabled in `next.config.js` for cleaner design review on local and phone previews

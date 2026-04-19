@@ -1,9 +1,14 @@
 import Link from "next/link";
 
 const links = [
-  { href: "https://github.com/", label: "GitHub", icon: GithubIcon },
-  { href: "https://linkedin.com/", label: "LinkedIn", icon: LinkedInIcon },
-  { href: "https://instagram.com/", label: "Instagram", icon: InstagramIcon }
+  { href: "https://github.com/thegeigerux", label: "GitHub", icon: GithubIcon },
+  { href: "https://linkedin.com/in/thegeigerux", label: "LinkedIn", icon: LinkedInIcon },
+  { href: "https://instagram.com/thegeigerux", label: "Instagram", icon: InstagramIcon },
+  {
+    href: "https://theuxoflife.substack.com/",
+    label: "Substack",
+    imageSrc: "https://substack.com/img/substack.png"
+  }
 ];
 
 export default function Footer() {
@@ -20,17 +25,28 @@ export default function Footer() {
               </div>
 
               <div className="flex items-center gap-2 sm:gap-3">
-              {links.map(({ href, label, icon: Icon }) => (
+              {links.map(({ href, label, icon: Icon, imageSrc }) => (
                 <Link
                   key={label}
                   href={href}
                   target="_blank"
                   rel="noreferrer"
                   aria-label={label}
-                  className="inline-flex h-11 w-11 items-center justify-center rounded-full text-[var(--color-muted)] transition hover:text-[var(--color-accent-2)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-accent)]"
+                  className="group relative inline-flex h-11 w-11 items-center justify-center rounded-full text-[var(--color-muted)] transition hover:text-[var(--color-accent-2)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-accent)]"
                 >
                   <span className="icon-button inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] sm:h-10 sm:w-10">
-                    <Icon className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
+                    {imageSrc ? (
+                      <img
+                        src={imageSrc}
+                        alt=""
+                        className="h-3.5 w-3.5 rounded-[2px] object-contain brightness-0 sm:h-4 sm:w-4"
+                      />
+                    ) : (
+                      <Icon className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
+                    )}
+                  </span>
+                  <span className="pointer-events-none absolute left-1/2 top-full mt-2 -translate-x-1/2 translate-y-1 whitespace-nowrap text-[0.58rem] font-semibold uppercase tracking-[0.18em] text-[var(--color-muted)] opacity-0 transition duration-200 group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:translate-y-0 group-focus-visible:opacity-100 sm:text-[0.62rem]">
+                    {label}
                   </span>
                 </Link>
               ))}
