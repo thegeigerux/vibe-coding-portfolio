@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const links = [
@@ -17,14 +18,21 @@ export default function Footer() {
       <div className="section-shell">
         <div className="glass-panel rounded-[1.75rem] px-5 py-4 sm:rounded-[2rem] sm:px-6 sm:py-5">
           <div className="flex flex-col gap-4 sm:gap-5">
-            <div className="flex items-center justify-between gap-3">
-              <div className="flex h-11 items-center">
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between sm:gap-3">
+              <div className="flex items-center gap-3">
+                <Image
+                  src="/brand/jg-glyph.svg"
+                  alt="JG monogram"
+                  width={40}
+                  height={29}
+                  className="h-8 w-auto shrink-0 sm:h-9"
+                />
                 <p className="min-w-0 whitespace-nowrap leading-none text-[0.58rem] font-semibold uppercase tracking-[0.18em] text-[var(--color-accent-2)] sm:text-[0.62rem] sm:tracking-[0.22em]">
                   Connect with me
                 </p>
               </div>
 
-              <div className="flex items-center gap-2 sm:gap-3">
+              <div className="flex flex-wrap items-center gap-2 sm:gap-3">
               {links.map(({ href, label, icon: Icon, imageSrc }) => (
                 <Link
                   key={label}
@@ -39,13 +47,13 @@ export default function Footer() {
                       <img
                         src={imageSrc}
                         alt=""
-                        className="h-3.5 w-3.5 rounded-[2px] object-contain brightness-0 sm:h-4 sm:w-4"
+                        className="h-3.5 w-3.5 rounded-[2px] object-contain brightness-0 invert sm:h-4 sm:w-4"
                       />
                     ) : (
                       <Icon className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
                     )}
                   </span>
-                  <span className="pointer-events-none absolute left-1/2 top-full mt-2 -translate-x-1/2 translate-y-1 whitespace-nowrap text-[0.58rem] font-semibold uppercase tracking-[0.18em] text-[var(--color-muted)] opacity-0 transition duration-200 group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:translate-y-0 group-focus-visible:opacity-100 sm:text-[0.62rem]">
+                  <span className="pointer-events-none absolute left-1/2 top-full mt-2 hidden -translate-x-1/2 translate-y-1 whitespace-nowrap text-[0.58rem] font-semibold uppercase tracking-[0.18em] text-[var(--color-muted)] opacity-0 transition duration-200 group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:translate-y-0 group-focus-visible:opacity-100 sm:block sm:text-[0.62rem]">
                     {label}
                   </span>
                 </Link>
