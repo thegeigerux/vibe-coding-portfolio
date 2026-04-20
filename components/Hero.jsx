@@ -29,9 +29,9 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative isolate overflow-x-clip pb-16 pt-2 sm:pb-18 sm:pt-3">
+    <section className="relative isolate overflow-x-clip pb-16 pt-24 sm:pb-18 sm:pt-28">
       <div className="section-shell grain section-glow relative min-h-screen">
-        <div className="relative z-10 grid min-h-[calc(100vh-4rem)] items-center gap-8 pb-8 pt-5 sm:gap-10 sm:pt-6 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
+        <div className="relative z-10 grid min-h-[calc(100vh-8rem)] items-center gap-8 pb-8 pt-2 sm:gap-10 sm:pt-3 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
           <div className="order-2 flex flex-col gap-4 sm:gap-5 lg:order-1">
             <div className="space-y-3 sm:space-y-4">
               <h1 className="max-w-4xl text-[1.45rem] font-medium leading-[1.02] tracking-tight sm:text-3xl md:text-4xl lg:text-[2.5rem]">

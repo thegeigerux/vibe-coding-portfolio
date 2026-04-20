@@ -145,11 +145,11 @@ export default function ContactForm() {
             />
             <FormField
               id="message"
-              label="Project details"
+              label="Message"
               value={formData.message}
               onChange={handleChange}
               error={errors.message}
-              placeholder="A quick overview of what you want to build..."
+              placeholder="Share a few details about your project, your question, or what you’d like to talk about..."
               multiline
             />
 
