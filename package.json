@@ -9,8 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/swc-wasm-nodejs": "^15.3.5",
     "lucide-react": "^1.8.0",
     "next": "^15.3.8",
+    "nodemailer": "^8.0.5",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-icons": "^5.5.0"

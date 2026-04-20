@@ -13,16 +13,19 @@ export default function About() {
               About
             </p>
             <h2 className="text-4xl font-black uppercase leading-none sm:text-5xl">
-              Design energy, engineering discipline.
+              Design with feeling.
+              <br />
+              Built with discipline.
             </h2>
           </div>
 
           <div className="grid gap-6">
             <p className="glass-panel max-w-3xl rounded-[2rem] p-6 text-base leading-relaxed text-[var(--color-muted)] sm:text-lg">
-              I build modern web experiences for founders, teams, and ambitious
-              products that need more than a template. My work lives where
-              frontend systems, UX craft, and performance discipline overlap, so
-              the result feels distinctive without becoming fragile.
+              I design and build modern web experiences for founders, teams, and
+              ambitious products that need to feel sharper than a template. My
+              work lives where user experience, frontend systems, accessibility,
+              motion, and performance meet, so the final product feels polished,
+              distinctive, and built to last.
             </p>
 
             <div className="grid gap-4 sm:grid-cols-2">

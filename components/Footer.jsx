@@ -25,9 +25,9 @@ export default function Footer() {
                   alt="JG monogram"
                   width={40}
                   height={29}
-                  className="h-8 w-auto shrink-0 sm:h-9"
+                  className="h-8 w-auto shrink-0 self-center sm:h-9"
                 />
-                <p className="min-w-0 whitespace-nowrap leading-none text-[0.58rem] font-semibold uppercase tracking-[0.18em] text-[var(--color-accent-2)] sm:text-[0.62rem] sm:tracking-[0.22em]">
+                <p className="min-w-0 whitespace-nowrap self-center translate-y-[8px] leading-none text-[0.58rem] font-semibold uppercase tracking-[0.18em] text-[var(--color-accent-2)] sm:text-[0.62rem] sm:tracking-[0.22em]">
                   Connect with me
                 </p>
               </div>
@@ -47,7 +47,7 @@ export default function Footer() {
                       <img
                         src={imageSrc}
                         alt=""
-                        className="h-3.5 w-3.5 rounded-[2px] object-contain brightness-0 invert sm:h-4 sm:w-4"
+                        className="theme-adaptive-mark h-3.5 w-3.5 rounded-[2px] object-contain sm:h-4 sm:w-4"
                       />
                     ) : (
                       <Icon className="h-3.5 w-3.5 sm:h-4 sm:w-4" />

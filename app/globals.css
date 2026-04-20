@@ -214,6 +214,14 @@ img {
   display: block;
 }
 
+.theme-adaptive-mark {
+  filter: brightness(0) invert(1);
+}
+
+:root[data-theme="light"] .theme-adaptive-mark {
+  filter: brightness(0) saturate(0) contrast(200%);
+}
+
 ::selection {
   background: var(--color-accent);
   color: var(--selection-text);

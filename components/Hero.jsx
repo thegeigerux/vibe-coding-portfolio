@@ -6,7 +6,9 @@ import Image from "next/image";
 const marqueeItems = [
   "Accessibility",
   "Design Thinking",
-  "Modern/Sleek UI's",
+  "Human-Centered Design",
+  "Modern Interfaces",
+  "Polished Interactions",
   "Customer Focused",
 ];
 

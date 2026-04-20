@@ -65,6 +65,16 @@ export default async function ProjectDetailPage({ params }) {
           <dl className="glass-panel neon-ring grid gap-4 rounded-[2rem] p-6">
             <div>
               <dt className="text-xs uppercase tracking-[0.25em] text-[var(--color-muted)]">
+                Tag
+              </dt>
+              <dd className="mt-2">
+                <span className="inline-flex rounded-full border border-[color:var(--color-accent)] bg-[color:var(--color-accent-soft)] px-3 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-[var(--color-text)]">
+                  {project.tag}
+                </span>
+              </dd>
+            </div>
+            <div>
+              <dt className="text-xs uppercase tracking-[0.25em] text-[var(--color-muted)]">
                 Stack
               </dt>
               <dd className="mt-2 text-base font-medium">{project.stack.join(", ")}</dd>

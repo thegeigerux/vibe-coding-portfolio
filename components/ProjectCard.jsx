@@ -14,14 +14,24 @@ export default function ProjectCard({ project, priority = false }) {
           className="object-cover opacity-90 transition duration-700 group-hover:scale-105 group-hover:opacity-100"
         />
         <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,transparent,rgba(6,8,22,0.8))]" />
+        <div className="absolute left-4 top-4 z-10">
+          <span
+            className="inline-flex rounded-full border border-transparent px-3 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-[var(--color-text)] shadow-[0_10px_24px_rgba(0,0,0,0.24)] backdrop-blur"
+            style={{
+              backgroundImage:
+                "linear-gradient(rgba(11,16,31,0.82), rgba(11,16,31,0.82)), linear-gradient(120deg, var(--color-accent), #8F78EE, var(--color-accent-2))",
+              backgroundOrigin: "border-box",
+              backgroundClip: "padding-box, border-box",
+            }}
+          >
+            {project.tag}
+          </span>
+        </div>
       </div>
       <div className="flex flex-1 flex-col gap-5 p-6">
         <div className="flex items-center justify-between gap-4">
           <p className="text-xs uppercase tracking-[0.28em] text-[var(--color-accent)]">
             {project.year}
-          </p>
-          <p className="text-xs uppercase tracking-[0.2em] text-[var(--color-muted)]">
-            {project.role}
           </p>
         </div>
 

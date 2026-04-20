@@ -5,7 +5,8 @@ import { useState } from "react";
 const initialState = {
   name: "",
   email: "",
-  message: ""
+  message: "",
+  website: ""
 };
 
 export default function ContactForm() {
@@ -56,7 +57,7 @@ export default function ContactForm() {
 
     if (Object.keys(nextErrors).length > 0) {
       setErrors(nextErrors);
-      setStatus({ type: "error", message: "Please fix the highlighted fields." });
+      setStatus({ type: "error", message: "A few details still need your attention." });
       return;
     }
 
@@ -81,12 +82,12 @@ export default function ContactForm() {
       setFormData(initialState);
       setStatus({
         type: "success",
-        message: payload.message || "Message sent successfully."
+        message: payload.message || "Your message is on its way."
       });
     } catch (error) {
       setStatus({
         type: "error",
-        message: error.message || "Unable to send your message right now."
+        message: error.message || "Your message could not be sent right now."
       });
     } finally {
       setIsSubmitting(false);
@@ -101,16 +102,30 @@ export default function ContactForm() {
             Contact
           </p>
           <h2 className="text-4xl font-black uppercase leading-none sm:text-5xl">
-            Have a product, portfolio, or launch in mind?
+            Have an idea
+            <br />
+            worth exploring?
           </h2>
           <p className="max-w-xl text-base leading-relaxed text-[var(--color-muted)]">
-            Tell me what you are building, what needs to feel better, and where the
-            current experience falls short. I’ll reply with a focused next step.
+            Whether you have a project in mind, a question to ask, or just want to
+            start a conversation, I’d be glad to hear from you.
           </p>
         </div>
 
         <form className="glass-panel neon-ring rounded-[2rem] p-6 sm:p-8" noValidate onSubmit={handleSubmit}>
           <div className="grid gap-5">
+            <div className="absolute left-[-9999px] top-auto h-px w-px overflow-hidden" aria-hidden="true">
+              <label htmlFor="website">Website</label>
+              <input
+                id="website"
+                name="website"
+                type="text"
+                tabIndex={-1}
+                autoComplete="off"
+                value={formData.website}
+                onChange={handleChange}
+              />
+            </div>
             <FormField
               id="name"
               label="Name"

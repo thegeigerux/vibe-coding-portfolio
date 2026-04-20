@@ -10,12 +10,15 @@ export default function Testimonials() {
               Testimonials
             </p>
             <h2 className="max-w-3xl text-4xl font-black uppercase leading-none sm:text-5xl">
-              Trusted to make the work feel better.
+              The work feels better
+              <br />
+              when trust is built in.
             </h2>
           </div>
           <p className="max-w-xl text-sm leading-relaxed text-[var(--color-muted)] sm:text-base">
-            Feedback from collaborators who needed stronger frontend execution, clearer
-            systems, and a more distinctive product feel.
+            Kind words from collaborators, clients, and teammates who have
+            trusted me to bring more clarity, polish, accessibility, and
+            momentum to the work.
           </p>
         </div>
 

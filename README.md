@@ -19,8 +19,9 @@ A modern Next.js portfolio built with a dark glassmorphism aesthetic, accessibil
 - **About Section**: Skills grid and supporting brand/story content
 - **Dedicated About Page**: Expanded bio, timeline, principles, and deeper personal context at `/about`
 - **Projects**: Responsive gallery with stacked mobile cards and dynamic project detail pages at `/projects/[slug]`
+  - Includes category tags and client-side filtering for `Vibe Coding`, `UX Design`, and `Web Design`
 - **Testimonials**: Homepage social proof section between Projects and Contact
-- **Contact Form**: API route at `app/api/contact/route.js`
+- **Contact Form**: API route at `app/api/contact/route.js` with spam filtering and Gmail delivery support
 - **Dark/Light Mode**: Theme toggle with persisted preference
 - **Glassmorphism UI**: Shared darker button treatments, card, panel, and icon styles throughout
 - **Accessible Color System**: Dark and light theme accent/muted colors tuned for stronger AAA-oriented contrast
@@ -57,6 +58,18 @@ Build for production:
 ```bash
 npm run build
 ```
+
+Configure contact form delivery:
+
+```bash
+cp .env.example .env.local
+```
+
+Then set:
+
+- `GMAIL_USER` to your Gmail address
+- `GMAIL_APP_PASSWORD` to a Gmail App Password
+- `CONTACT_TO` to the inbox that should receive submissions
 
 Run the production server:
 
@@ -103,7 +116,10 @@ lib/
 
 - The footer year updates automatically with `new Date().getFullYear()`
 - The footer includes live social links for GitHub, LinkedIn, Instagram, and Substack
-- The contact route is currently a validated stub ready for email or CRM wiring
+- The contact route now supports Gmail delivery via `nodemailer`
+- Gmail delivery requires `GMAIL_USER` and `GMAIL_APP_PASSWORD` in `.env.local`
+- If `CONTACT_TO` is not set, submissions default to the configured Gmail inbox
+- `.env.local` is ignored by git, while `.env.example` remains safe to commit
 - Local development uses Turbopack to avoid the instability we hit with the Webpack dev server
 - The Next.js dev indicator is disabled in `next.config.js` for cleaner design review on local and phone previews
 - Ambient background motion respects `prefers-reduced-motion`
